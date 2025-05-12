@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0d0d;
+  --foreground: #e5e5e5;
+}
+
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+@theme {
+
+  --text-h1: clamp(2rem, 5vw + 1rem, 4rem);
+  --text-p: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+
+  --color-brand: #e4791c;
+  --color-brand-50: #fef7ec;
+  --color-brand-100: #fae9cb;
+  --color-brand-200: #f5d192;
+  --color-brand-300: #efb45a;
+  --color-brand-400: #eb9a34;
+  --color-brand-500: #e4791c;
+  --color-brand-600: #ca5815;
+  --color-brand-700: #a83d15;
+  --color-brand-800: #883018;
+  --color-brand-900: #702817;
+  --color-brand-950: #401208;
+
+  --color-background: var(--background);
+  --color-background-v1: #18181b;
+  --color-background-v2: #1a1a1a;
+
+  --breakpoint-wide: 1440px;
+  --breakpoint-xs: 425px;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -300px;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply px-8 sm:px-16 py-12 sm:py-24;
+  }
+
+  .padding-x {
+    @apply px-8 sm:px-16;
+  }
+
+  .padding-y {
+    @apply py-12 sm:py-24;
+  }
+
+  .padding-t {
+    @apply pt-12 sm:pt-24
+  }
+
+  .padding-b {
+    @apply pb-12 sm:pb-24
+  }
+
+  .section-header {
+    font-size:  clamp(1.5rem, 4vw + 1rem, 3rem);
+    @apply font-semibold text-center bg-gradient-to-tr from-orange-600 via-orange-400 to-orange-600 bg-clip-text text-transparent
+  }
+
+  .title {
+    font-size:  clamp(.8rem, 2vw + 1rem, 1.5rem);
+    @apply font-medium
+  }
+
+  .box-shadow {
+    box-shadow: 1px 1px 10px orange;
+  }
+
+  .bg-card {
+    @apply  bg-background-v1 backdrop-blur-3xl border-zinc-800  rounded-xl;
+  }
+
+  .sponsor-wrapper {
+    @apply relative h-[200px] w-full  max-w-[1440px]  mx-auto overflow-hidden;
+  }
+
+  .sponsor-item {
+    @apply absolute flex justify-center items-center bg-white w-[300px] h-[200px] rounded-2xl;
+    left: max(calc(300px * 5), 100%);
+    animation-name: scrollLeft;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+}
