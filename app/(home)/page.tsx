@@ -1,5 +1,4 @@
 import ImageCarousel from "@/components/ImageCarousel";
-import TeamImgSection from "@/app/(home)/TeamImgSection";
 import { FaArrowRight } from "react-icons/fa6";
 import AchievementsSection from "./AchievementsSection";
 import OurMissionSection from "./OurMissionSection";
