@@ -32,7 +32,7 @@ const Navbar = () => {
 
             {/* for large Screens */}
             <div className="max-md:hidden flex gap-6 font-medium text-slate-300">
-              {navLinks.map((navLink, index) => (
+              {navLinks.map((navLink) => (
                 <Link href={navLink.to} key={navLink.label} className={`${pathName == navLink.to ? 'text-brand' : 'text-base'}`}>{navLink.label}</Link>
               ))}
             </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
             </div>
 
               <ul className={`md:hidden absolute  ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-100 opacity-0'} transition-all duration-300 ease-in w-full  h-[calc(100vh-97px)] mt-[97px]  sm:h-[calc(100vh-113px)] sm:mt-[113px] pt-30 bg-background/96  backdrop-blur-3xl flex flex-col items-center gap-8 top-0 left-0 right-0 font-medium text-lg`}>
-                {navLinks.map((navLink, index) => (
+                {navLinks.map((navLink) => (
                   <li className={`${pathName === navLink.to ? 'text-brand' : 'text-base'}`} key={navLink.label} onClick={() => handleLinkClick(navLink.to)}>{navLink.label}</li>
                 ))}
               </ul> 
