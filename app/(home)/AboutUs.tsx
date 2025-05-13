@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { achievements } from '@/constants'
 import SectionHeader from '@/components/SectionHeader'
 
 const AboutUsSection = () => {

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import dummyImg from '@/public/000000.jpg'
 import { achievements } from '@/constants'
 import SectionHeader from '@/components/SectionHeader'
 
