@@ -5,11 +5,12 @@ import AchievementsSection from "./AchievementsSection";
 import OurMissionSection from "./OurMissionSection";
 import SponsorsSection from "./SponsorsSection";
 import VideoShowcase from "./VideoShowcase";
+import AboutUsSection from "./AboutUs";
 
 export default function Home() {
   return (
     <main className="max-w-[1440px] mx-auto pt-[97px] sm:pt-[113px]">
-      <div className="padding">
+      <div id="home" className="padding">
         <div className="w-full  flex flex-col lg:flex-row gap-16 justify-center items-center">
           <section className="lg:w-1/2 max-lg:text-center">
             <h1 className="mt-2 text-h1 leading-tight  font-bold"><span className="text-brand">Ad Astra </span>Rover Team</h1>
@@ -30,14 +31,18 @@ export default function Home() {
       </div>
 
       <div className="padding">
-        <TeamImgSection></TeamImgSection>
+        <AboutUsSection></AboutUsSection>
       </div>
-
+{/* 
       <div className="padding">
+        <TeamImgSection></TeamImgSection>
+      </div> */}
+
+      <div id="achievements" className="padding">
         <AchievementsSection></AchievementsSection>
       </div>
 
-      <div className="padding">
+      <div id="our-mission" className="padding">
         <OurMissionSection></OurMissionSection>
       </div>
 
@@ -45,7 +50,7 @@ export default function Home() {
         <SponsorsSection></SponsorsSection>
       </div>
 
-      <div className="padding">
+      <div id="video-showcase" className="padding">
         <VideoShowcase></VideoShowcase>
       </div>
     </main>

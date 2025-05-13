@@ -19,30 +19,6 @@ export const roverImgs = [
   },
 ]
 
-export const navLinks = [
-  {
-    to: "/",
-    label: "Home"
-  },
-  {
-    to: "/our-team",
-    label: "Our Team"
-  },
-  {
-    to: "/about-us",
-    label: "About us"
-  },
-  {
-    to: "/contact",
-    label: "Contact"
-  },
-  {
-    to: "/subsystems",
-    label: "Subsystems"
-  },
-
-]
-
 export const achievements = [
   {
     img: '/awards-imgs/award1.jpg',
@@ -84,4 +60,28 @@ export const youtubeVideos = [
   "https://youtube.com/embed/YMNgGOnkVvc?si=ZO5wvIUI9qY67b8T&mute=1",
   "https://youtube.com/embed/QGpdXVzNbVQ?si=-tJOK2LBeBPkSuzO&mute=1",
   "https://youtube.com/embed/PtppshSXQ6U?si=ZbOH8mWg8qC_cWHW&mute=1"
+]
+
+
+export const navLinks = [
+  {
+    label: 'Home',
+    to: '#home',
+  },
+  {
+    label: 'About us',
+    to: '#about-us',
+  },
+  {
+    label: 'Achievements',
+    to: '#achievements',
+  },
+  {
+    label: 'Our Mission',
+    to: '#our-mission',
+  },
+  {
+    label: 'Video showcase',
+    to: '#video-showcase',
+  },
 ]
