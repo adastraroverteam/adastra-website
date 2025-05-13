@@ -12,10 +12,9 @@
   
     const sliderOptions = {
       loop: true,
-      slideChanged(slider: any) {
+      slideChanged(slider: { track: { details: { rel: number } } }) {
         setCurrentSlide(slider.track.details.rel)
-      },
-      slides: {
+            },  slides: {
         perView: 1,
         spacing: 15,
       },
@@ -35,7 +34,7 @@
       },
     }
   
-    const [sliderRef, instanceRef] = useKeenSlider(sliderOptions)
+    const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(sliderOptions)
   
     useEffect(() => {
       const interval = setInterval(() => {
